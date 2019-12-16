@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans 
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+						http://www.springframework.org/schema/beans/spring-beans.xsd"
+> 
+	<bean id="student1" class="com.kim.ch0601.Student">
+		<constructor-arg value="홍길동" />
+		<constructor-arg value="10" />
+		<constructor-arg> 
+			<list>	<!-- ArrayList 데이터형 -->
+				<value>수영</value>
+				<value>요리</value>
+			</list>
+		</constructor-arg>
+		<property name="height"> <!-- set메서드를 통해 초기화 -->
+			<value>187</value>
+		</property>
+		<property name="weight" value="84" />
+	</bean>
+	<bean id="studentInfo1" class="com.kim.ch0601.StudentInfo">
+		<property name="student">
+			<ref bean="student1" />
+		</property>
+	</bean>
+</beans>

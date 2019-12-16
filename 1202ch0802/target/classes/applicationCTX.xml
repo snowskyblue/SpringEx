@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans 
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+						http://www.springframework.org/schema/beans/spring-beans.xsd
+						http://www.springframework.org/schema/context 
+						http://www.springframework.org/schema/context/spring-context-3.2.xsd"
+>
+	<context:property-placeholder location="classpath:admin.properties, classpath:sub_admin.properties" />
+	<!-- .properties파일(이 xml파일과 같은 폴더에 위치해야함) 위치를 지정해줌 -->
+	
+	<!-- .properties파일 사용 (빈의 값들을 직접 넣어주는게 아니라 외부에서 가져옴)하여 빈 설정 
+	다 똑같고 value태그의 content만 다름-->	
+	<bean id="adminConnection" class="com.kim.ch0802.AdminConnection" >
+		<property name="adminId">
+			<value>${admin.id}</value> <!-- .properties파일로부터 값을 가져올시 jsp el문법처럼 사용 -->
+		</property>
+		<property name="adminPw">
+			<value>${admin.pw}</value>
+		</property>
+		<property name="sub_adminId">
+			<value>${sub_admin.id}</value>
+		</property>
+		<property name="sub_adminPw">
+			<value>${sub_admin.pw}</value>
+		</property>
+	</bean>
+
+</beans>

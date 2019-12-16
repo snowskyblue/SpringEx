@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 자바의 setter/getter형식의 클래스를 xml에서 만들어 놓은 것
+xml name space와 그 밑의 것들은 java의 패키지 개념
+ -->
+<beans 
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+						http://www.springframework.org/schema/beans/spring-beans.xsd"
+	
+> 
+	<!-- bean은 각각의 setter/getter클래스를 xml로 정의한것 -->
+	<bean id="calculator" class="com.kim.ch03ex01.Calculator"></bean> <!-- 멤버변수가 없는 클래스 -->
+	<bean id="myCalculator" class="com.kim.ch03ex01.MyCalculator">
+		<property name="calculator"> <!-- name은 클래스에 정의되어 있는 객체 변수명 -->
+			<ref bean="calculator"></ref> <!-- 객체는 참조형 변수(reference type) -->
+		</property>
+		<property name="firstNum" value="10"/> <!-- int지만 무조건 문자열로 초기값(value)줌 -->
+		<property name="secondNum" value="2"/>
+	</bean> <!-- 멤버변수가 3개 -->
+</beans>
+

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 2 elements to &apos;1202ch0603/src/main/java/com.kim.ch0603&apos;&#x0D;&#x0A;- Original project: &apos;1202ch0603_&apos;&#x0D;&#x0A;- Destination element: &apos;1202ch0603/src/main/java/com.kim.ch0603&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     com.kim.ch0603.Student.java&#x0D;&#x0A;     com.kim.ch0603.MainClass.java" description="Copy compilation units" destination="=1202ch0603/src\/main\/java&lt;com.kim.ch0603" element1="/src&lt;com.kim.ch0603{Student.java" element2="/src&lt;com.kim.ch0603{MainClass.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1575260509580" units="2" version="1.0"/>
+</session>

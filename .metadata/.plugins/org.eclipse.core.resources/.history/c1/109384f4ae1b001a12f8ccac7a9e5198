@@ -1,0 +1,8 @@
+package com.kim.jdbctemplate.util;
+
+
+public class Constant {
+
+	public static JdbcTemplate template;
+	
+}

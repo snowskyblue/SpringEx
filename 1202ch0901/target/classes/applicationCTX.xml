@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<beans 
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation = "http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context 
+		http://www.springframework.org/schema/context/spring-context-3.2.xsd
+		http://www.springframework.org/schema/aop 
+		http://www.springframework.org/schema/aop/spring-aop-3.2.xsd"
+>
+
+	<bean id="logAop" class="com.kim.ch0901.LogAop" /> <!-- 자바 AOP클래스(Proxy)를 bean으로 등록 -->
+	
+	<aop:config> <!-- aop의 pointcut,advice(실행할 코드)등을 정의 -->
+		<aop:aspect id="logger" ref="logAop"> <!-- aspect(pointcut,advice)정의  -->
+			<aop:pointcut id="publicM" expression="within(com.kim.ch0901.*)"  /> <!-- Spring에서의 적용위치는 모든 클래스의 메서드 호출 부분 -->
+			<aop:around pointcut-ref="publicM" method="loggerAop" /> <!-- 처리 방식과 aop클래스의 적용할 메서드 -->
+		</aop:aspect>
+	</aop:config>
+	
+	<bean id="student" class="com.kim.ch0901.Student" >
+		<property name="name" value="홍길동" />
+		<property name="age" value="10" />
+		<property name="gradeNum" value="3" />
+		<property name="classNum" value="5" />
+	</bean>
+	
+	<bean id="worker" class="com.kim.ch0901.Worker" >
+		<property name="name" value="홍길순" />
+		<property name="age" value="35" />
+		<property name="job" value="개발자" />
+	</bean>
+	
+</beans>
