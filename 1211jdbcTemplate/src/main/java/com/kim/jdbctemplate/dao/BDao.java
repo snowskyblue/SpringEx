@@ -51,6 +51,7 @@ public class BDao {
 	public ArrayList<BDto> list() {
 		//드라이버 로드, 커넥션 생성 & DB 연결, SQL 실행, DB 연결 해제 부분은 JDBC 템플릿이 알아서 해준다
 		String query = "select bId, bName, bTitle, bContent, bDate, bHit, bGroup, bStep, blndent from mvc_board order by bGroup desc, bStep asc";
+		System.out.println("tem" + template);
 		return (ArrayList<BDto>) template.query(query, new BeanPropertyRowMapper<BDto>(BDto.class));
 		/*<BDto> List<BDto> org.springframework.jdbc.core.JdbcTemplate.query(String sql, RowMapper<BDto> rowMapper)
 		 * ArrayList<BDto> : the result List, containing mapped objects

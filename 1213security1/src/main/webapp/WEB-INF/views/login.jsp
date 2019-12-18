@@ -70,6 +70,9 @@ $(document).ready(function(){
 			beforeSend : function(xhr, settings){
 				xhr.setRequestHeader("X-CSRF-TOKEN", $("meta[name='_csrf']").attr('content'));
 			},
+			success : function() {				
+				location.href = "mainFrame";
+			},
 			error : function(){
 				$("#div1").text("server error!");
 			}

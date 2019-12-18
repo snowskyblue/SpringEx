@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0"> 
+<title>upload</title>
+<link type="text/css" rel="stylesheet" href="style/styleSheet.css" />
+<style>
+form {
+	margin-left : 30px;
+}
+input {
+	padding : 10px;		
+}
+</style>
+<script src="//code.jquery.com/jquery-latest.min.js">
+</script> 
+<script>
+</script>
+</head>
+<body>
+
+<h3 style="margin-left:30px; width: 80%;">upload페이지</h3>
+<!-- 파일을 사용하기 위해서는 enctype="multipart/form-data"를 추가 -->
+<form id="frm1" action="upload" method="POST" enctype="multipart/form-data">
+	작성자이름 : <input type="text" name="author"><br/>
+	업로드파일 : <input type="file" name="fileName"><br/>
+	<input type="submit" value="파일업로드">	
+</form>
+
+</body>
+</html>

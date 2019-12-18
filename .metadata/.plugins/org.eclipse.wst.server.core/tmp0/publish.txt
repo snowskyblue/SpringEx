@@ -1,3 +1,6 @@
 #Tomcat publish data
-#Mon Dec 16 16:20:22 KST 2019
-org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\user\\.m2\\repository\\org\\springframework\\spring-web\\3.2.3.RELEASE\\spring-web-3.2.3.RELEASE.jar=WEB-INF/lib/spring-web-3.2.3.RELEASE.jar
+#Wed Dec 18 11:02:46 KST 2019
+org.eclipse.jst.jee.server\:1213security1=D\:\\TomCat\\apache-tomcat-8.5.47\\wtpwebapps\\1213security1
+org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\user\\.m2\\repository\\org\\springframework\\spring-web\\3.2.3.RELEASE\\spring-web-3.2.3.RELEASE.jar=D\:\\TomCat\\apache-tomcat-8.5.47\\wtpwebapps\\mySec\\WEB-INF\\lib\\spring-web-3.2.3.RELEASE.jar
+org.eclipse.jst.jee.server\:stay=D\:\\TomCat\\apache-tomcat-8.5.47\\wtpwebapps\\stay
+org.eclipse.jst.jee.server\:mySec=D\:\\TomCat\\apache-tomcat-8.5.47\\wtpwebapps\\mySec

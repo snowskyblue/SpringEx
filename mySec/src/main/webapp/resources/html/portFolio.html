@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1.0"> 
+<title>portfolio</title>
+<link type="text/css" rel="stylesheet" href="style/styleSheet.css" />
+<style>
+* {
+    box-sizing: border-box; /*padding이나 테두리를 주더라도 그것을 포함해서 크기를 지정 */
+}
+.responsive {
+    padding: 0 6px; /*여백을 상하는 0,좌우는 6을 줌 */
+    float: left;
+    width: 24.99999%; /*rwd에서 넓이를 전체 12칸중 3칸을 점유 --pc모니터시 적용 */    
+}
+div.gallery {
+    border: 1px solid #ccc;
+}
+div.gallery:hover {
+    border: 1px solid #777;
+}
+div.gallery img {
+    width: 100%;   
+}
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+@media only screen and (max-width: 700px) { /*태블렛에 적용 */
+	.responsive {
+		width: 49.99999%;
+        margin: 6px 0;
+	}
+}
+@media only screen and (max-width: 500px){ /*스마트폰 */
+    .responsive {
+        width: 100%;
+    }
+}
+
+.clearfix:after { /*float속성이 이후에는 적용 안되도록 함 */
+    content: "";
+    display: table;
+    clear: both;
+}
+
+</style>
+</head>
+<body>
+
+<div class="pageTitle">Image Gallery이용 MY PortFlio </div>
+
+<p><b>Responsive Web형태로 만든 포트폴리오</b></p>
+
+<div class="responsive">
+	<div class="gallery"> <!-- image수용 및 클릭시 전체 임지 보이도록 함 -->
+		<a href="images/b1.jpg" target="_blank">
+			<img src="images/b1.jpg" width="400" height="300" alt="포트폴리오1">
+		</a>
+	</div>
+	<div class="desc"> <!-- 그림에 대한 설명-->
+		프로젝트에 대한 포트폴리오 1페이지 입니다
+	</div>
+</div>
+
+<div class="responsive">
+	<div class="gallery"> <!-- image수용 및 클릭시 전체 임지 보이도록 함 -->
+		<a href="images/b2.jpg" target="_blank">
+			<img src="images/b2.jpg" width="400" height="300" alt="포트폴리오1">
+		</a>
+	</div>
+	<div class="desc"> <!-- 그림에 대한 설명-->
+		프로젝트에 대한 포트폴리오 2페이지 입니다
+	</div>
+</div>
+
+<div class="responsive">
+	<div class="gallery"> <!-- image수용 및 클릭시 전체 임지 보이도록 함 -->
+		<a href="images/portfolio3.png" target="_blank">
+			<img src="images/portfolio3.png" width="400" height="300" alt="포트폴리오1">
+		</a>
+	</div>
+	<div class="desc"> <!-- 그림에 대한 설명-->
+		프로젝트에 대한 포트폴리오 3페이지 입니다
+	</div>
+</div>
+
+
+<div class="responsive">
+	<div class="gallery"> <!-- image수용 및 클릭시 전체 임지 보이도록 함 -->
+		<a href="images/portfolio4.png" target="_blank">
+			<img src="images/portfolio4.png" width="400" height="300" alt="포트폴리오1">
+		</a>
+	</div>
+	<div class="desc"> <!-- 그림에 대한 설명-->
+		프로젝트에 대한 포트폴리오 4페이지 입니다
+	</div>
+</div>
+
+<div class="responsive">
+	<div class="gallery"> <!-- image수용 및 클릭시 전체 임지 보이도록 함 -->
+		<a href="images/b1.jpg" target="_blank">
+			<img src="images/b1.jpg" width="400" height="300" alt="포트폴리오1">
+		</a>
+	</div>
+	<div class="desc"> <!-- 그림에 대한 설명-->
+		프로젝트에 대한 포트폴리오 5페이지 입니다
+	</div>
+</div>
+
+<div class="responsive">
+	<div class="gallery"> <!-- image수용 및 클릭시 전체 임지 보이도록 함 -->
+		<a href="images/b2.jpg" target="_blank">
+			<img src="images/b2.jpg" width="400" height="300" alt="포트폴리오1">
+		</a>
+	</div>
+	<div class="desc"> <!-- 그림에 대한 설명-->
+		프로젝트에 대한 포트폴리오 6페이지 입니다
+	</div>
+</div>
+
+<div class="clearfix"></div>
+</body>
+</html>

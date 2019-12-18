@@ -23,9 +23,10 @@
 		<intercept-url pattern="/js/**" access="permitAll" />
 		<intercept-url pattern="/images/**" access="permitAll" />
 		<intercept-url pattern="/login_duplicate" access="permitAll" />
-		<intercept-url pattern="/**" access="hasRole('ROLE_USER')" />
+		<intercept-url pattern="/**" access="hasRole('ROLE_USER')" requires-channel="https" />
 		<!-- ROLE_USER는 일반 가입자에게만 허용이고 hasRole()이 spEL
-		hasRole('ROLE_ANONYMOUS')는 permitAll이고 hasRole('ROLE_ADMIN')은 관리자에게만 허용 -->
+		hasRole('ROLE_ANONYMOUS')는 permitAll이고 hasRole('ROLE_ADMIN')은 관리자에게만 허용
+		requires-channel="https" ssl 추가 -->
 		
 		<!-- form-login엘리먼트는 사용자이름과 비밀번호를 가지고 있는 폼기반 인증방법을 사용한다.
 		login-page="/login" 으로 요청시 포워딩된 페이지가 로그인으로 사용하는 페이지임을 스프링에 알려줌 (자체제작 로그인 화면)

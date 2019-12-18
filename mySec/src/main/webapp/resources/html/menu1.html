@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1.0"> 
+<title>menu.html</title>
+<!-- 스타일의 internal의 external의 우선 순위는 늦게 나오는 것이 높음 -->
+
+<style>
+	a {
+		display : block; /*a는 inline인데 이를 block으로 변경 */
+		text-decoration: none; /*링크텍스트 밑줄 표시 제거 */
+		width: 150px; /*블록레벨은 width는 부모의 100%를 차지하므로 크기 줌 */
+		text-align: center;
+		border: 1px dotted gray;
+		color : black;
+		padding : 5px;
+		margin : 5px;
+		cursor: pointer;
+	}
+	a:hover { /*마우스를 갖다 되는 스타일은 유사클래스 :hover를 이용 */
+		border: 1px solid gray;
+		background: #e1e1e1;
+	}
+	#clock {		
+		width: 150px; /*블록레벨은 width는 부모의 100%를 차지하므로 크기 줌 */
+		text-align: center;
+		border: 1px dotted gray;
+		color : white;
+		padding : 5px;
+		margin : 5px;
+		height : 20px;
+		font-size : 12px;
+		background : #8c8c8c;		
+	}
+</style>
+<base href="http://localhost:8181/secProject/" />
+</head>
+<body>
+
+<div id="clock">
+</div>
+<div>
+	<a href="logout_view" >Log Out</a>
+</div>
+
+<h3>Basic</h3>
+
+<div>
+<!-- href의 html을 클릭하면 name속성이 content인 iframe창에 보여줌 -->
+   
+	<a href="html/home.html" target="content">Home</a>	
+	<a href="html/selector.html" target="content">Selector</a>
+	<a href="html/slideEffect.html" target="content">Silde Effect</a>
+	<a href="html/fadeEffect.html" target="content">Fade Effect</a>
+	<a href="html/animationEffect.html" target="content">Animation Effect</a>
+</div>
+
+<h3>Intermediate</h3>
+
+<div>
+	<a href="html/TabExample.html" target="content">Tab Example</a>
+	<a href="html/Carousel.html" target="content">Carousel</a>
+	<a href="html/CarouselAdvance.html" target="content">Advance Carousel</a>
+	<a href="html/ajax.html" target="content">Ajax</a>
+	<a href="html/rwd.html" target="content">RWD</a>
+	<a href="html/naviBar.html" target="content">Navi-Bar</a>			
+</div>
+
+<h3>MyPage</h3>
+<div>
+ 	
+	<a  href="list?pg=1" target="content">My게시판</a>
+	<a  href="html/upload.html" target="content">업다운로드</a>
+	<a  href="buy_ticket" target="content">티켓주문/발매</a>
+
+<!-- 
+	<form action="list" method="GET"  target="content">
+		<input type="hidden" name="pg" value="1">
+		<input type="submit" value="My게시판">
+	</form>	
+ -->	
+	<a href="html/portFolio.html" target="content">My PortFolio</a>
+</div>
+
+<script src="//code.jquery.com/jquery-latest.min.js">
+</script> 
+<script>
+$(document).ready(function(){
+	var myVar = window.setInterval(myTimer,1000);	
+});
+function myTimer(){
+	 var d = new Date();
+	 var time = d.toLocaleString();
+	 $("#clock").text(time);
+	// document.getElementById("clock").innerHTML = d.toLocaleString();
+}
+</script>
+</body>
+</html>

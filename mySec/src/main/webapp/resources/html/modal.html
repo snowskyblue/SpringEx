@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<title>modal</title>
+<!-- 
+<link type="text/css" rel="stylesheet" href="style/styleSheet.css">
+-->
+<style>
+.modal-content {
+	position: relative; /*STATIC상태시의 위치를 기준 */
+    background-color: #fefefe;
+    margin: auto; /*좌우는 중간 위치 */
+    padding: 0;
+    border: 1px solid #888;
+    width: 40%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    display : none;
+}
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+.close {
+    color: white;
+    float: right; /*오른쪽에 배치 */
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover, .close:focus {
+	color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+.modal-header {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+.modal-body {
+	padding: 2px 16px;
+}
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+#mb1,#mb2 {
+	text-align : center;
+	color : blue;
+}
+</style>
+<script src="//code.jquery.com/jquery-latest.min.js">
+</script>
+<script>
+$(document).ready(function(){	
+	$(".modal-content").css("display","block");
+	$("#span1").click(function(){
+		$(".modal-content").css("display","none");
+	});	
+	$(window).click(function(){
+		$(".modal-content").css("display","none");
+	});
+});
+</script>
+</head>
+<body>
+
+<div  id = "modal" class="modal-content">
+	<div class="modal-header">
+		<span id = "span1" class="close">&times;</span>
+		<h2>Kook's Dialog Box</h2>
+	</div>
+	<div class="modal-body">
+		<p id="mb1">Some text in the Modal Body</p>
+     		<p id="mb2">Some other text...</p>
+	</div>
+	<div class="modal-footer">
+		<h2>Modal Footer</h2>
+	</div>
+</div>
+</body>
+</html>

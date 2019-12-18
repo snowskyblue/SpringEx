@@ -76,15 +76,13 @@
          Either JSSE or OpenSSL style configuration may be used regardless of
          the SSLImplementation selected. JSSE style configuration is used below.
     -->
-    <!--
-    <Connector port="8443" protocol="org.apache.coyote.http11.Http11NioProtocol"
-               maxThreads="150" SSLEnabled="true">
+    <!--security1 풀어줌(server재설정시마다 열어줄것)-->
+    <Connector SSLEnabled="true" maxThreads="150" port="8443" protocol="org.apache.coyote.http11.Http11NioProtocol">
         <SSLHostConfig>
-            <Certificate certificateKeystoreFile="conf/localhost-rsa.jks"
-                         type="RSA" />
+            <Certificate certificateKeystoreFile="conf/localhost-rsa.jks" certificateKeystorePassword="930823" type="RSA"/>
         </SSLHostConfig>
     </Connector>
-    -->
+    
     <!-- Define an SSL/TLS HTTP/1.1 Connector on port 8443 with HTTP/2
          This connector uses the APR/native implementation which always uses
          OpenSSL for TLS.
@@ -149,7 +147,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="1203ch1201" path="/ch1201" reloadable="true" source="org.eclipse.jst.jee.server:1203ch1201"/><Context docBase="1204ch1202" path="/ch12Exam2" reloadable="true" source="org.eclipse.jst.jee.server:1204ch1202"/><Context docBase="1204ch1301" path="/ch1301" reloadable="true" source="org.eclipse.jst.jee.server:1204ch1301"/><Context docBase="1204ch1401" path="/ch1401" reloadable="true" source="org.eclipse.jst.jee.server:1204ch1401"/><Context docBase="1204ch1402" path="/ch1402" reloadable="true" source="org.eclipse.jst.jee.server:1204ch1402"/><Context docBase="1205ch1404" path="/ch1404" reloadable="true" source="org.eclipse.jst.jee.server:1205ch1404"/><Context docBase="1205ch1501" path="/ch1501" reloadable="true" source="org.eclipse.jst.jee.server:1205ch1501"/><Context docBase="1205ch1503" path="/ch1503" reloadable="true" source="org.eclipse.jst.jee.server:1205ch1503"/><Context docBase="springProject1" path="/project1" reloadable="true" source="org.eclipse.jst.jee.server:springProject1"/><Context docBase="19120504springProject" path="/springProject1" reloadable="true" source="org.eclipse.jst.jee.server:19120504springProject"/><Context docBase="1209ajaxEx1" path="/ajax1" reloadable="true" source="org.eclipse.jst.jee.server:1209ajaxEx1"/><Context docBase="1209sseEx1" path="/1209sseEx1" reloadable="true" source="org.eclipse.jst.jee.server:1209sseEx1"/><Context docBase="1209sseEx2" path="/sseEx2" reloadable="true" source="org.eclipse.jst.jee.server:1209sseEx2"/><Context docBase="1209ajax2" path="/1209ajax2" reloadable="true" source="org.eclipse.jst.jee.server:1209ajax2"/><Context docBase="1210fileupdown" path="/fileupdown" reloadable="true" source="org.eclipse.jst.jee.server:1210fileupdown"/><Context docBase="1211jdbcTemplate" path="/jdbctemplate" reloadable="true" source="org.eclipse.jst.jee.server:1211jdbcTemplate"/><Context docBase="1212transaction" path="/transaction" reloadable="true" source="org.eclipse.jst.jee.server:1212transaction"/><Context docBase="stay" path="/stay" reloadable="true" source="org.eclipse.jst.jee.server:stay"/><Context docBase="1213security1" path="/security" reloadable="true" source="org.eclipse.jst.jee.server:1213security1"/></Host>
+      <Context docBase="1213security1" path="/security" reloadable="true" source="org.eclipse.jst.jee.server:1213security1"/><Context docBase="mySec" path="/secProject" reloadable="true" source="org.eclipse.jst.jee.server:mySec"/><Context docBase="stay" path="/stay" reloadable="true" source="org.eclipse.jst.jee.server:stay"/></Host>
     </Engine>
   </Service>
 </Server>
