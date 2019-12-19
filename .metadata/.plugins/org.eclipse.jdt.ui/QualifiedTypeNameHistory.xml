@@ -21,14 +21,11 @@
 <fullyQualifiedTypeName name="org.springframework.web.multipart.MultipartFile"/>
 <fullyQualifiedTypeName name="java.io.File"/>
 <fullyQualifiedTypeName name="java.util.List"/>
-<fullyQualifiedTypeName name="javax.servlet.http.HttpServletResponse"/>
 <fullyQualifiedTypeName name="javax.servlet.annotation.MultipartConfig"/>
 <fullyQualifiedTypeName name="java.io.FileInputStream"/>
 <fullyQualifiedTypeName name="javax.servlet.ServletOutputStream"/>
 <fullyQualifiedTypeName name="com.kim.jdbctemplate.command.BCommand"/>
-<fullyQualifiedTypeName name="org.springframework.ui.Model"/>
 <fullyQualifiedTypeName name="com.kim.jdbctemplate.command.BListCommand"/>
-<fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
 <fullyQualifiedTypeName name="com.kim.jdbctemplate.command.BWriteCommand"/>
 <fullyQualifiedTypeName name="com.kim.jdbctemplate.command.BContentCommand"/>
 <fullyQualifiedTypeName name="com.kim.jdbctemplate.command.BModifyCommand"/>
@@ -55,8 +52,11 @@
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMethod"/>
 <fullyQualifiedTypeName name="org.springframework.stereotype.Controller"/>
 <fullyQualifiedTypeName name="org.springframework.security.core.userdetails.UserDetailsService"/>
-<fullyQualifiedTypeName name="com.kim.security.dao.BDaoTemplate"/>
 <fullyQualifiedTypeName name="com.kim.security.dto.UserDto"/>
 <fullyQualifiedTypeName name="org.springframework.jdbc.core.BeanPropertyRowMapper"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpServletResponse"/>
+<fullyQualifiedTypeName name="org.springframework.ui.Model"/>
+<fullyQualifiedTypeName name="com.kim.security.dao.BDaoTemplate"/>
 <fullyQualifiedTypeName name="com.kim.security.util.Constant"/>
 </qualifiedTypeNameHistroy>

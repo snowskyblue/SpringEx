@@ -8,28 +8,28 @@
 		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="set"/>
+		<item key="selection" value="security"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="true"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
-			<item value="set"/>
-			<item value="constant."/>
-			<item value="template."/>
-			<item value="frm1"/>
-			<item value="로그인"/>
-			<item value="when"/>
-			<item value="kook"/>
-			<item value="Constant"/>
-			<item value="daot"/>
-			<item value="dao"/>
-			<item value="BDaoTemplate"/>
 			<item value="security"/>
-			<item value="customUserDetailsService"/>
-			<item value="service"/>
-			<item value="j_"/>
+			<item value="한글"/>
+			<item value="Spring Security 추가 부분"/>
+			<item value="추가"/>
+			<item value="jstl"/>
+			<item value="강원"/>
+			<item value="SSLHostConfig"/>
+			<item value="certi"/>
+			<item value="intercept-url pattern=&quot;/**&quot; access=&quot;hasRole(&apos;ROLE_USER&apos;)"/>
+			<item value="constraint"/>
+			<item value="contrain"/>
+			<item value="contraints"/>
+			<item value="SSLEnabled=&quot;true&quot;"/>
+			<item value="Connector SSLEnabled=&quot;true&quot; maxThreads=&quot;150&quot; port=&quot;8443&quot; protocol=&quot;org.apache.coyote.http11.Http11NioProtocol"/>
+			<item value="genkey"/>
 		</list>
 		<list key="replacehistory">
 			<item value="check"/>

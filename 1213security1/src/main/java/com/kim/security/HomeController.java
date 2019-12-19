@@ -19,6 +19,7 @@ import com.kim.security.util.Constant;
 
 /**
  * Handles requests for the application home page.
+ * keytool -genkey -alias MyKeyAlias -keyalg RSA -keystore localhost-rsa.jks
  */
 @Controller
 public class HomeController {
