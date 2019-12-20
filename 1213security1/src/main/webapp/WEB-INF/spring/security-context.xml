@@ -3,11 +3,15 @@
   xmlns:beans="http://www.springframework.org/schema/beans"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://www.springframework.org/schema/beans
-           http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+           http://www.springframework.org/schema/beans/spring-beans.xsd
            http://www.springframework.org/schema/security
-           http://www.springframework.org/schema/security/spring-security-3.2.xsd">
+           http://www.springframework.org/schema/security/spring-security.xsd">
            
     <http auto-config="true" use-expressions = "true">
+    	<headers> <!-- X-Frame-Options : deny 해결(iframe 사용시) -->
+    		<frame-options disabled="true"></frame-options>
+    	</headers>
+    	
     <!-- auto-config='true'를 설정한 것만으로 기본 로그인페이지/HTTP 기본인증/로그아웃기능 등을 제공 -->
     <!-- use-expressions = "true" 는 SpEL(Spring Express Language) 을 사용, default는 false임
     	true시에는 SpEL을 사용해서 작성해야만 에러가 발생 안함-->
@@ -54,7 +58,7 @@
 		 
 		<logout invalidate-session="true" logout-url="/logout"   logout-success-url="/login?logout=1" />
 		
-		<csrf/> 
+		<csrf/>
 		<!-- csrf는 cross site request forgery는 사이트간 요청 위조로 다른페이지에서 요청을 위조해서
 		공격하는 방식, csrf 해킹을 예방하기 위해 사용 -->
 	</http>

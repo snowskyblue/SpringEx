@@ -21,6 +21,31 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	
+	<!-- JdbcTemplate사용을 위한 bean 생성 (ref로 들어감)-->
+	<beans:bean name="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource" >
+		<beans:property name="driverClassName" value="oracle.jdbc.driver.OracleDriver" />
+		<beans:property name="url" value="jdbc:oracle:thin:@localhost:1521:orcl" />
+		<beans:property name="username" value="kim" />
+		<beans:property name="password" value="kim" />
+	</beans:bean>
+	
+	<!-- @Repository 붙여서 막아줄 수 있음
+	<beans:bean name="dao" class="com.kim.myBatis1.dao.ContentDao">
+	</beans:bean>
+	 -->
+	<!--  myBatis 추가 -->
+	
+	<!-- myBatis는 SqlSessionFactoryBean클래스와 SqlSessionTemplate클래스의 객체를 이용하여 sql처리 -->
+	<beans:bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<beans:property name="dataSource" ref="dataSource"></beans:property>
+		<beans:property name="mapperLocations" value="classpath:com/kim/myBatis1/dao/mapper/*.xml"></beans:property>
+	</beans:bean>
+	
+	<!-- sql처리에 필요한 모든 메서드를 가지고 있는 객체 -->
+	<beans:bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
+		<beans:constructor-arg index="0" ref="sqlSessionFactory"></beans:constructor-arg>
+	</beans:bean>
+	
 	<context:component-scan base-package="com.kim.myBatis1" />
 	
 	

@@ -31,7 +31,8 @@
 <!--j_spring_security_check는 개발자의 frontcontroller에 있는 경로처리가 아니고
 spring security로 요청하는 경로임
 csrf를 방지하기 위한 헤더 부분 추가 -->
-<form id="frm1" method="post" action="j_spring_security_check">
+<!-- <form id="frm1" method="post" action="j_spring_security_check"> -->
+<form id="frm1" method="post" action="login">
 	<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" /><br/>
 	<b>아이디:</b> <input type="email" name="uid" size="40" placeholder="email Enter" required><br/><br/>
 	<b>비&nbsp;&nbsp;&nbsp;번</b><input type="password" name="upw" size="40"  placeholder="pw Enter" required><br/><br/>

@@ -30,7 +30,7 @@ public class HomeController {
 	private PlatformTransactionManager transactionManager;
 	private BDaoTemplate dao;
 	
-	@Autowired 
+	@Autowired
 	public void setTemplate(JdbcTemplate template) {
 		this.template = template;
 		Constant.template = this.template;

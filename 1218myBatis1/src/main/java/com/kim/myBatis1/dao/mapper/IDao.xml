@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- //mybatis의 xml로 IDao 인터페이스와 연결되어 있음(템플레이트 다 지워도 됨) -->
+<!-- DOCTYPE엘리먼트 -->
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- mapper.xml문서의 최상위 엘리먼트로 이 안에다 sql처리(id를 이름으로 하는 statement)를 만들어 줌 -->
+<!-- namespace속성은 interface의 패키지포함 경로(필수) -->
+<mapper namespace="com.kim.myBatis1.dao.IDao">
+	<select id="listDao" resultType="com.kim.myBatis1.dto.ContentDto">
+		SELECT * FROM BATIS ORDER BY MID DESC
+	</select>
+	<!-- sqlSession.insert("writeDao",dto); -->
+	<insert id="writeDao" parameterType="com.kim.myBatis1.dto.ContentDto">
+		INSERT INTO BATIS (MID, MWRITER, MCONTENT)
+		VALUES (BATIS_SEQ.NEXTVAL, #{mWriter}, #{mContent})
+	</insert>
+	<delete id="deleteDao" parameterType="int">
+		DELETE FROM BATIS WHERE MID = #{mId}
+	</delete>
+	<select id="viewDao" parameterType="int" resultType="com.kim.myBatis1.dto.ContentDto">
+		SELECT * FROM BATIS WHERE MID = #{mId}
+	</select>
+</mapper>
+
+<!-- mapper엘리먼트 안에는 각 sql의 DML(Data Manipulation Language)인
+select, insert,delete,update등의 엘리먼트가 옴
+id는 interface의 메서드이름 , parameterType은 메서드의 파라메터 변수형, 
+resultType은 메서드의 리턴 타입을 적어줌(객체형은 패키지까지 포함)
+#{파라메터명}으로 preparedStatement의 ?에 사용되는 값( 메서드의 파라메터 사용 )-->

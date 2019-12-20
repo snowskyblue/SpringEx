@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="org.springframework.context.annotation.Configuration"/>
 <fullyQualifiedTypeName name="org.springframework.context.annotation.Bean"/>
 <fullyQualifiedTypeName name="org.springframework.context.annotation.AnnotationConfigApplicationContext"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="org.springframework.beans.factory.InitializingBean"/>
 <fullyQualifiedTypeName name="org.springframework.beans.factory.DisposableBean"/>
 <fullyQualifiedTypeName name="org.springframework.context.support.AbstractApplicationContext"/>
@@ -36,7 +34,6 @@
 <fullyQualifiedTypeName name="com.kim.jdbctemplate.dao.BDao"/>
 <fullyQualifiedTypeName name="com.kim.jdbctemplate.dto.BDto"/>
 <fullyQualifiedTypeName name="com.kim.transaction.dto.TicketDto"/>
-<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
 <fullyQualifiedTypeName name="org.springframework.jdbc.core.JdbcTemplate"/>
 <fullyQualifiedTypeName name="com.kim.transaction.dao.TicketDao"/>
 <fullyQualifiedTypeName name="com.kim.transaction.util.Constant"/>
@@ -59,4 +56,8 @@
 <fullyQualifiedTypeName name="org.springframework.ui.Model"/>
 <fullyQualifiedTypeName name="com.kim.security.dao.BDaoTemplate"/>
 <fullyQualifiedTypeName name="com.kim.security.util.Constant"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="com.kim.myBatis1.dto.ContentDto"/>
+<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+<fullyQualifiedTypeName name="org.apache.ibatis.session.SqlSession"/>
 </qualifiedTypeNameHistroy>

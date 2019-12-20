@@ -1,6 +1,0 @@
-package com.kim.transaction.util;
-
-//본 클래스는 주입받은 bean을 static형으로 저장할 수 있도록 bean객체를 선언 해둠
-public class Constant {
-
-}

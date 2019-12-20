@@ -46,6 +46,19 @@
 		<beans:property name="dataSource" ref="dataSource"/>
 	</beans:bean>
 	
+	<!--  myBatis 추가 -->
+	
+	<!-- myBatis는 SqlSessionFactoryBean클래스와 SqlSessionTemplate클래스의 객체를 이용하여 sql처리 -->
+	<beans:bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<beans:property name="dataSource" ref="dataSource"></beans:property>
+		<beans:property name="mapperLocations" value="classpath:com/kim/myBatis1/dao/mapper/*.xml"></beans:property>
+	</beans:bean>
+	
+	<!-- sql처리에 필요한 모든 메서드를 가지고 있는 객체 -->
+	<beans:bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
+		<beans:constructor-arg index="0" ref="sqlSessionFactory"></beans:constructor-arg>
+	</beans:bean>
+	
 	<context:component-scan base-package="com.kim.ch02ex01" />
 	
 	
