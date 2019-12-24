@@ -1,5 +1,0 @@
-package com.kim.security.security;
-
-public class CustomUserDetailsService {
-
-}

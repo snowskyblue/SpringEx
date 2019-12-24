@@ -8,28 +8,28 @@
 		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="form"/>
+		<item key="selection" value="option"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="true"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
-			<item value="form"/>
-			<item value="security-config"/>
-			<item value="spring-j"/>
-			<item value="aspe"/>
-			<item value="org.s"/>
-			<item value="contentdao"/>
-			<item value="mid"/>
-			<item value="X-CSRF-TOKEN"/>
-			<item value="3.4.1"/>
-			<item value="security"/>
-			<item value="한글"/>
-			<item value="Spring Security 추가 부분"/>
-			<item value="추가"/>
-			<item value="jstl"/>
+			<item value="option"/>
+			<item value="op"/>
+			<item value="test"/>
+			<item value="dropdown-menu"/>
+			<item value="dropdown-menu&quot;"/>
+			<item value="drop"/>
 			<item value="강원"/>
+			<item value="&lt;/style&gt;"/>
+			<item value="relativ"/>
+			<item value="3rd"/>
+			<item value="script&gt;"/>
+			<item value="document.g"/>
+			<item value="post"/>
+			<item value="get"/>
+			<item value="simple"/>
 		</list>
 		<list key="replacehistory">
 			<item value="check"/>

@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aop-reference-model>
-<aop-project name="1127ch02Exam1"/>
 <aop-project name="stay"/>
+<aop-project name="1127ch02Exam1"/>
+<aop-project name="1223chart1"/>
+<aop-project name="chart1"/>
+<aop-project name="practice"/>
 <aop-project name="1218myBatis1"/>
 <aop-project name="1213security1"/>
 </aop-reference-model>

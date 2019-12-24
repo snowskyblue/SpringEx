@@ -35,7 +35,8 @@ public class BController {
 			if (error != null) {
 				model.addObject("error", "Invalid username and password!");
 			}
-			if (logout != null) {
+			if (logout != null && logout != "" ) {
+				System.out.println("logout°ª : " + logout);
 				model.addObject("msg", "You've been logged out successfully!");
 			}
 
@@ -48,5 +49,10 @@ public class BController {
 		@RequestMapping("mainFrame")
 		public String mainFrame(HttpServletRequest request,HttpServletResponse response,Model model) {
 			return "mainFrame";
+		}
+		
+		@RequestMapping("logout_view")
+		public String logout_view() {
+			return "logout_view";
 		}
 }

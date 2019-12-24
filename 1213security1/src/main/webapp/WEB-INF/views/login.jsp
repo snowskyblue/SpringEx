@@ -64,10 +64,10 @@ $(document).ready(function(){
 	$("#frm1").submit(function(event){
 		event.preventDefault();
 		$.ajax({
-			url : $("#frm1").attr("action"),
-			type : $("#frm1").attr("method"),
+			url : $("#frm1").attr("action"), //login RequestMapping
+			type : $("#frm1").attr("method"), //post
 			data : $("#frm1").serialize(),
-			dataType : "text", 
+			dataType : "text", //리턴되는 데이터 타입??????????
 			beforeSend : function(xhr, settings){
 				xhr.setRequestHeader("X-CSRF-TOKEN", $("meta[name='_csrf']").attr('content'));
 			},

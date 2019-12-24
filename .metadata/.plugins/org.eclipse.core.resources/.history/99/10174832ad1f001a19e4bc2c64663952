@@ -1,6 +1,0 @@
-package com.kim.security.dao;
-
-public class BDaoTemplate {
-	JdbcTemplate template;
-	@Autowired //servlet-context.xml bean bound
-}

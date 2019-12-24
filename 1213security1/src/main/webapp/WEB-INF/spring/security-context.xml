@@ -54,10 +54,15 @@
 		invalidate-session="true"는 로그아웃하면 세션을 제거
 		logout-url은 로그아웃 경로
 		logout-success-url은 로그 아웃 성공시 이동 경로
-		logout-success-url="/login?logout=1" 은 로그인 후 로그아웃했다는 것을 표시 -->
+		logout-success-url="/login?logout=1" 은 로그인 후 로그아웃했다는 것을 표시(주소창 변경) -->
 		 
-		<logout invalidate-session="true" logout-url="/logout"   logout-success-url="/login?logout=1" />
-		
+		 <!--  
+		<logout invalidate-session="true" logout-url="/logout"   logout-success-url="/login?logout=1" /> 
+		-->
+		<logout invalidate-session="true" delete-cookies="JSESSIONID,SPRING_SECURITY_REMEMBER_ME_COOKIE" 
+			logout-url="/logout" logout-success-url="/login?logout" />
+		<remember-me key="wmoskey" token-validity-seconds="2419200"/> <!-- 4 주 -->
+			   
 		<csrf/>
 		<!-- csrf는 cross site request forgery는 사이트간 요청 위조로 다른페이지에서 요청을 위조해서
 		공격하는 방식, csrf 해킹을 예방하기 위해 사용 -->
