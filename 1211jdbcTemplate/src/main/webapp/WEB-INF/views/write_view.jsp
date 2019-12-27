@@ -24,7 +24,7 @@
 	<form action="write" method="post">
 		<tr>
 			<td> 이름 </td>
-			<td> <input type="text" name="bName" size = "50"> </td>
+			<td> <input type=s"text" name="bName" size = "50"> </td>
 		</tr>
 		<tr>
 			<td> 제목 </td>

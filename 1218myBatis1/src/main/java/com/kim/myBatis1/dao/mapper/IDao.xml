@@ -7,7 +7,7 @@
 	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <!-- mapper.xml문서의 최상위 엘리먼트로 이 안에다 sql처리(id를 이름으로 하는 statement)를 만들어 줌 -->
-<!-- namespace속성은 interface의 패키지포함 경로(필수) -->
+<!-- namespace속성은 interface의 패키지포함 경로(필수) - id가 같은 다른 sql문 구분 -->
 <mapper namespace="com.kim.myBatis1.dao.IDao">
 	<select id="listDao" resultType="com.kim.myBatis1.dto.ContentDto">
 		SELECT * FROM BATIS ORDER BY MID DESC

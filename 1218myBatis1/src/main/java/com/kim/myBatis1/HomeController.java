@@ -24,17 +24,18 @@ import com.kim.myBatis1.dto.ContentDto;
  */
 @Controller
 public class HomeController {
-	
+	/*1. pom.xml에 mybatis maven 추가 
+	2. servlet-context.xml에 dataSource, sqlSessionFactory,sqlSession 빈 만들기*/
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 	
 	/******************bean injection 주입***************************************/
-	@Autowired //servlet-context.xml의 bean과 매핑
-	private SqlSession sqlSession;
+	/*@Autowired //servlet-context.xml의 bean과 매핑
+	private SqlSession sqlSession; 안씀???*/
 	
 	@Autowired
 	private ContentDao dao;
 	
-	/******************bean injection***************************************/
+	/******************Request Mapping***************************************/
 	
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) {

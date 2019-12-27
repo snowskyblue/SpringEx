@@ -25,7 +25,7 @@
 <hr/>
 <h3>리턴 받은 내용을 표시할 부분</h3>
 <div id="content"></div>
-<button type="buttn" id="btn">Ajax</button>
+<button type="button" id="btn">Ajax</button>
 
 <!--jquery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -42,7 +42,7 @@ $(document).ready(function(){
 		All jQuery AJAX methods use the ajax() method. 
 		This method is mostly used for requests where the other methods cannot be used.*/
 		$.ajax({
-			url : "http://localhost:8181/ajax1/data",
+			url : "http://localhost:8181/ajax1/data", //클릭해도 8181/ajax1/ajax에서 url은 변경 x
 			cache : false,
 			data : "", //서버로 보내는 데이터*
 			dataType : "html", //리턴받은 데이터형

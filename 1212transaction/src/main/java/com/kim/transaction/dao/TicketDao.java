@@ -18,6 +18,7 @@ import com.kim.transaction.util.Constant;
 
 public class TicketDao {
 
+	/*홈컨트롤러에서도 주입해주지만 여기서는 오토와이드 안쓰고 Constant 씀*/
 	JdbcTemplate template;
 	PlatformTransactionManager transactionManager;
 	TransactionTemplate transactionTemplate;
@@ -42,7 +43,7 @@ public class TicketDao {
 	public void setTransactionTemplate(TransactionTemplate transactionTemplate) {
 		this.transactionTemplate = transactionTemplate;
 	}
-	/*
+	
 	//method
 	public void buyTicket(final TicketDto dto) {
 		System.out.println("buyTicket()");
@@ -96,9 +97,9 @@ public class TicketDao {
 		
 
 	}//buyTicket()
-	*/
 	
 	
+	/*
 	//method
 		public void buyTicket(final TicketDto dto) {
 			System.out.println("buyTicket()");
@@ -139,12 +140,12 @@ public class TicketDao {
 							}
 						});
 					}
-				});	
+				});
 				transactionManager.commit(status);
 			}
 			catch(Exception e) {
 				e.printStackTrace();
 				transactionManager.rollback(status);
 			}
-		}
+		}*/
 	}

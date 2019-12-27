@@ -14,10 +14,12 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="D:\webSpring_workspace\ajax2"/>
 			<item value="D:\webSpring_workspace"/>
 			<item value="C:\Users\user\Documents\카카오톡 받은 파일\19120504springProject\19120504springProject"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value="D:\webSpring_workspace\1209ajax2\pom.xml"/>
 			<item value=""/>
 		</list>
 	</section>
@@ -34,5 +36,12 @@
 			<item key="DIALOG_Y_ORIGIN" value="191"/>
 			<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|10.2|0|WINDOWS|1|-17|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
 		</section>
+	</section>
+	<section name="CleanDialogSettings">
+		<item key="DIALOG_X_ORIGIN" value="629"/>
+		<item key="DIALOG_Y_ORIGIN" value="182"/>
+		<item key="DIALOG_WIDTH" value="662"/>
+		<item key="DIALOG_HEIGHT" value="500"/>
+		<item key="TOGGLE_SELECTED" value="false"/>
 	</section>
 </section>

@@ -15,11 +15,11 @@ public class ContentDao implements IDao {
 	
 	@Autowired
 	private SqlSession sqlSession; //field로 autowired(servlet-context.xml에서 빈생성)
-	
+	/*
 	//Constructor
 	public ContentDao() {
 		
-	}
+	}*/
 
 	@Override
 	public ArrayList<ContentDto> listDao() {
@@ -45,6 +45,6 @@ public class ContentDao implements IDao {
 	@Override
 	public void deleteDao(String bId) {
 		sqlSession.delete("deleteDao", Integer.parseInt(bId));
-	}	
+	}
 
 }

@@ -56,7 +56,7 @@ public class HomeController {
 		System.out.println("src value: " + src);
 		MultipartFile mf = mtfRequest.getFile("file");
 		//MultipartFile객체를 얻어냄, 이때는 getParameter(일반 input)대신 getFile() 메서드 사용
-		String path = "D:/upimage/"; //업로드된 파일 저장 위치
+		String path = "D:/upimage/"; //업로드된 파일 저장 위치 (이름은 원본이름에 시간을 붙여 유일성)
 		
 		//폼에서 전달된 파일 이름
 		String orginFileName = mf.getOriginalFilename();

@@ -1,12 +1,20 @@
 #Tomcat publish data
-#Tue Dec 24 17:40:25 KST 2019
+#Fri Dec 27 17:19:33 KST 2019
+org.eclipse.jst.jee.server\:19120504springProject=D\:\\TomCat\\apache-tomcat-8.5.47\\wtpwebapps\\19120504springProject
 org.eclipse.jst.jee.server\:1224ckEditor=D\:\\TomCat\\apache-tomcat-8.5.47\\wtpwebapps\\1224ckEditor
-org.eclipse.jst.jee.server\:practice=D\:\\TomCat\\apache-tomcat-8.5.47\\wtpwebapps\\practice
-org.eclipse.jst.jee.server\:1213security1=D\:\\TomCat\\apache-tomcat-8.5.47\\wtpwebapps\\1213security1
-org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\user\\.m2\\repository\\org\\springframework\\spring-web\\4.3.22.RELEASE\\spring-web-4.3.22.RELEASE.jar=D\:\\TomCat\\apache-tomcat-8.5.47\\wtpwebapps\\stay\\WEB-INF\\lib\\spring-web-4.3.22.RELEASE.jar
+org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\user\\.m2\\repository\\org\\springframework\\spring-web\\3.2.3.RELEASE\\spring-web-3.2.3.RELEASE.jar=D\:\\TomCat\\apache-tomcat-8.5.47\\wtpwebapps\\1218myBatis1\\WEB-INF\\lib\\spring-web-3.2.3.RELEASE.jar
+org.eclipse.jst.jee.server\:1210fileupdown=D\:\\TomCat\\apache-tomcat-8.5.47\\wtpwebapps\\1210fileupdown
 org.eclipse.jst.jee.server\:mySec=D\:\\TomCat\\apache-tomcat-8.5.47\\wtpwebapps\\mySec
+org.eclipse.jst.jee.server\:1211jdbcTemplate=D\:\\TomCat\\apache-tomcat-8.5.47\\wtpwebapps\\1211jdbcTemplate
+org.eclipse.jst.jee.server\:1212transaction=D\:\\TomCat\\apache-tomcat-8.5.47\\wtpwebapps\\1212transaction
+org.eclipse.jst.jee.server\:1223chart1=D\:\\TomCat\\apache-tomcat-8.5.47\\wtpwebapps\\1223chart1
+org.eclipse.jst.jee.server\:1209sseEx1=D\:\\TomCat\\apache-tomcat-8.5.47\\wtpwebapps\\1209sseEx1
+org.eclipse.jst.jee.server\:1209ajax2=D\:\\TomCat\\apache-tomcat-8.5.47\\wtpwebapps\\1209ajax2
+org.eclipse.jst.jee.server\:1213security1=D\:\\TomCat\\apache-tomcat-8.5.47\\wtpwebapps\\1213security1
 org.eclipse.jst.jee.server\:1218myBatis1=D\:\\TomCat\\apache-tomcat-8.5.47\\wtpwebapps\\1218myBatis1
 org.eclipse.jst.jee.server\:chart1=D\:\\TomCat\\apache-tomcat-8.5.47\\wtpwebapps\\chart1
-org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\user\\.m2\\repository\\org\\springframework\\spring-web\\3.2.3.RELEASE\\spring-web-3.2.3.RELEASE.jar=D\:\\TomCat\\apache-tomcat-8.5.47\\wtpwebapps\\1218myBatis1\\WEB-INF\\lib\\spring-web-3.2.3.RELEASE.jar
-org.eclipse.jst.jee.server\:1223chart1=D\:\\TomCat\\apache-tomcat-8.5.47\\wtpwebapps\\1223chart1
+org.eclipse.jst.jee.server\:practice=D\:\\TomCat\\apache-tomcat-8.5.47\\wtpwebapps\\practice
 org.eclipse.jst.jee.server\:stay=D\:\\TomCat\\apache-tomcat-8.5.47\\wtpwebapps\\stay
+org.eclipse.jst.jee.server\:ajax2=D\:\\TomCat\\apache-tomcat-8.5.47\\wtpwebapps\\ajax2
+org.eclipse.jst.jee.server\:1209ajaxEx1=D\:\\TomCat\\apache-tomcat-8.5.47\\wtpwebapps\\1209ajaxEx1
+org.eclipse.jst.jee.server\:1227fileConvert=D\:\\TomCat\\apache-tomcat-8.5.47\\wtpwebapps\\1227fileConvert

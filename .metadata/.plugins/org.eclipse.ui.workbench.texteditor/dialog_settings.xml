@@ -8,36 +8,37 @@
 		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="option"/>
+		<item key="selection" value="footer"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="true"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
-			<item value="option"/>
-			<item value="op"/>
-			<item value="test"/>
-			<item value="dropdown-menu"/>
-			<item value="dropdown-menu&quot;"/>
-			<item value="drop"/>
-			<item value="강원"/>
-			<item value="&lt;/style&gt;"/>
-			<item value="relativ"/>
-			<item value="3rd"/>
-			<item value="script&gt;"/>
-			<item value="document.g"/>
-			<item value="post"/>
-			<item value="get"/>
-			<item value="simple"/>
+			<item value="footer"/>
+			<item value="batis"/>
+			<item value="href"/>
+			<item value="8443"/>
+			<item value="servlet"/>
+			<item value="3.jpg"/>
+			<item value="3"/>
+			<item value="3.0"/>
+			<item value="fileupload"/>
+			<item value="logout값"/>
+			<item value="login"/>
+			<item value="meta[name=&apos;_csr"/>
+			<item value="X-CSRF-TOKEN"/>
+			<item value="json"/>
+			<item value="/dependencies"/>
 		</list>
 		<list key="replacehistory">
+			<item value="pie"/>
 			<item value="check"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="923"/>
-		<item key="DIALOG_Y_ORIGIN" value="462"/>
+		<item key="DIALOG_X_ORIGIN" value="1186"/>
+		<item key="DIALOG_Y_ORIGIN" value="423"/>
 		<item key="DIALOG_WIDTH" value="362"/>
 		<item key="DIALOG_HEIGHT" value="490"/>
 		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|10.2|0|WINDOWS|1|-17|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
@@ -48,5 +49,9 @@
 		<item key="DIALOG_WIDTH" value="1938"/>
 		<item key="DIALOG_HEIGHT" value="1048"/>
 		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
+	</section>
+	<section name="org.eclipse.ui.texteditor.GotoLineAction$GotoLineDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="652"/>
+		<item key="DIALOG_Y_ORIGIN" value="344"/>
 	</section>
 </section>
