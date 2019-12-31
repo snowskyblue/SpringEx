@@ -17,6 +17,13 @@ buy_ticket_end.jsp 입니다. <br />
 ${ticketInfo.consumerId } <br />
 ${ticketInfo.amount } <br />
 
+<form action="AccommodationWrite" method="post">
+	<input type="hidden" name="consumerId" value="${ticketInfo.consumerId }"> <br />
+	<input type="hidden" name="amount" value="${ticketInfo.amount }"> <br />
+	<input type="text" name="secondId"> <br/>
+	<input type="submit" value="구매" > <br />
+</form>
+<a href="/">뒤로</a>
 
 </body>
 </html>

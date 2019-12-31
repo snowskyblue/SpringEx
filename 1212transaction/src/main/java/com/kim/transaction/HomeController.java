@@ -83,6 +83,12 @@ public class HomeController {
 		return "buy_ticket";
 	}
 	
+	@RequestMapping("/buy_ticket")
+	public String buy_ticket(TicketDto ticketDto, Model model) {
+		
+		return "buy_ticket";
+	}
+	
 	@RequestMapping("/buy_ticket_card")
 	public String buy_ticket_card(TicketDto ticketDto, Model model) {
 		//TicketDto객체를 파라메터로 사용하는 방식은 해당 DTO클래스가 있어야 함
@@ -96,6 +102,14 @@ public class HomeController {
 		model.addAttribute("ticketInfo", ticketDto);
 		
 		return "buy_ticket_end";
+	}
+	
+	@RequestMapping("/AccommodationWrite")
+	public String AccommodationWrite(TicketDto ticketDto, Model model) {
+		
+		model.addAttribute("ticketInfo2", ticketDto);
+		
+		return "AccommodationWrite";
 	}
 	
 }

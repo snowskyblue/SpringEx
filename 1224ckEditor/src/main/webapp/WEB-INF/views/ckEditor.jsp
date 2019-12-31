@@ -50,15 +50,20 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
 <!-- ckEditor DecoupledEditor  -->
 <script src="https://cdn.ckeditor.com/ckeditor5/16.0.0/decoupled-document/ckeditor.js"></script>
+<script src="https://ckeditor.com/apps/ckfinder/3.4.5/ckfinder.js"></script>
 
-<script>
+
+<script type="module">
 DecoupledEditor
     .create( document.querySelector('#editor'),{
     	//removePlugins: ['ImageUpload'],
     	language: 'ko',
     	ckfinder: {
 	   		 uploadUrl: 'ckedit' //요청경로
-	   	}
+	   	},
+	   	toolbar: [ 'ckfinder', 'imageUpload', '|', 'heading', '|', 'bold', 'italic','link', 'bulletedList',
+	   		'numberedList', 'blockQuote', '|', 'undo','redo','Outdent','Indent','highlight', 'fontsize',
+	   		'fontfamily','insertTable','alignment']	
     })
     /* 화살표는 람다식(이클립스 버그 나서 아래에 일반함수식으로 대신했음-작동은 잘 됨)
     .then(editor  => {
