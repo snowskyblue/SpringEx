@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<!-- 자바스크립트는 메인스레드(ui thread)밖에 없지만 웹워커로 멀티스레드 구현 -->
+<!-- //worker thread(=background thread)에 값을 주어서 실행시킬 수 있음 -->
+<input type="text" id="num"> <!-- 입력된 값은 속성 value의 값이 됨 -->
+<button onclick="calculate()">계샨</button>
+<button onclick="stopCalculate()">중지</button>
+
+<p id="sum">Sum: </p>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<script>
+
+var worker;
+
+function calculate() {
+	if(worker){ //if worker exists (true)
+		worker.terminate();
+	}
+	
+	var num = document.getElementById("num").value; //input에 입력된 값을 변수에 넣어줌
+	worker = new Worker("../js/worker2.js"); //background 작업을 수행할 워커 객체
+	worker.onmessage = function(evt) { //worker객체로부터 메시지가 오면, event객체에 실려오는 데이터 사용
+		document.getElementById("sum").innerHTML = "Sum : " + evt.data;
+		//evt.data = result at the worker2.js
+	};
+	worker.onerror = function(evt) { //error발생시(에러의 메시지 출력)
+		alert("Error : " + evt.message + "(" + evt.filename + ":" + evt.lineno	);
+	};
+	
+	worker.postMessage(num); //입력된 값을 워커에게 넘겨줌 -> worker2.js에 onmessage를 일으킴
+	//parameter num is dvt.data at the worker2.js
+	//worker thread(=background thread)에 값을 주어서 실행시킬 수 있음
+}
+
+function stopCalculate() {
+	if(worker) {
+		worker.terminate();
+	}
+	alert("Worker is Stopped!");
+}
+
+</script>
+
+</body>
+</html>

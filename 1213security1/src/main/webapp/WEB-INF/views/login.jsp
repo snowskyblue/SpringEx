@@ -38,6 +38,10 @@ csrf를 방지하기 위한 헤더 부분 추가 -->
 	<b>비&nbsp;&nbsp;&nbsp;번</b><input type="password" name="upw" size="40"  placeholder="pw Enter" required><br/><br/>
 	<input type="submit" value="로그인">
 </form>
+<br/>
+<!-- security에 암호화 더하기 -->
+<a href="join_view">가입처리</a> <br/>
+
 <!--jquery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <!--popper -->
@@ -50,17 +54,17 @@ csrf를 방지하기 위한 헤더 부분 추가 -->
  */
 $(document).ready(function(){
 	<c:choose>
-		<c:when test="${not empty log}">
-			$("#div1").text("Welcome!");
+		<c:when test="${not empty log}"> //model의 log속성이 null이 아니면
+			$("#div1").text("Welcome!(로그인 폼 위에 출력)");
 		</c:when>
-		<c:when test="${not empty msg}">
-			$("#div1").text("Logged out!");
+		<c:when test="${not empty msg}"> //model의 msg값이 null이 아니면(로그아웃)
+			$("#div1").text("Logged out!(로그인 폼 위에 출력)");
 		</c:when>
 		<c:otherwise>
-		$("#div1").text("Login Fail!");
+		$("#div1").text("Login Fail!(로그인 폼 위에 출력)");
 		</c:otherwise>
 	</c:choose>
-	
+	/* 내 jsp에서 보내는게 아니어서 에이젝스로 보낼 필요 없음(시큐리티를 적용하지 않고 내가 처리할때 필요)
 	$("#frm1").submit(function(event){
 		event.preventDefault();
 		$.ajax({
@@ -79,6 +83,7 @@ $(document).ready(function(){
 			}
 		});
 	});
+	*/
 });
 </script>
 </body>

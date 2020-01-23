@@ -36,7 +36,7 @@ public class HomeController {
 		Constant.template = this.template;
 	}
 	
-	@Autowired //servlet-context.xml¿¡ ºóÀº ÀÖÀ¸³ª beanÅ¬·¡½º°¡ ¾øÀ»½Ã bound
+	@Autowired //servlet-context.xmlì— ë¹ˆì€ ìˆìœ¼ë‚˜ beaní´ë˜ìŠ¤ê°€ ì—†ì„ì‹œ bound
 	public void setTransactionManager(PlatformTransactionManager transactionManager) {
 		this.transactionManager = transactionManager;
 		Constant.transactionManager = this.transactionManager;
@@ -55,5 +55,31 @@ public class HomeController {
 	public String home(Locale locale, Model model) {
 		return "index";
 	}
+	
+	/*
+	 * jspì—ì„œ idì°¾ê¸°
+	 * <%@ taglib prefix="sec"
+	    uri="http://www.springframework.org/security/tags"%>
+	    <td>
+	    	<sec:authorize access="isAuthenticated()">
+	             <sec:authentication property="principal.username" var="user_id" />
+	             <div id="user_id">ì•ˆë…•í•˜ì„¸ìš”. ${user_id }</div>
+	    	</sec:authorize>
+	    </td>
+	    
+	    ì•ˆë˜ë©´
+	    <p>principal : <sec:authentication property="principal"/></p>
+	    <p>principal.username : <sec:authentication property="principal.username"/></p>
+	<p>principal.password : <sec:authentication property="principal.password"/></p>
+	<p>principal.email : <sec:authentication property="principal.email"/></p>
+	<p>principal.enabled : <sec:authentication property="principal.enabled"/></p>
+	<p>principal.accountNonExpired : <sec:authentication property="principal.accountNonExpired"/></p>
+
+	<sec:authorize url="/user/loginPage" var="t">${t }</sec:authorize>â€‹
+	<sec:authorize access="hasRole('ROLE_USER')" var="u">${u }</sec:authorize>
+	<sec:authorize ifnotgranted="hasRole('ROLE_USER')" var="b">${b }</sec:authorize>
+
+	*/
+
 	
 }

@@ -22,7 +22,7 @@
 <body>
 
 <a href="login?log=start">로그인 페이지</a>
-<!-- login.jsp 로 이동 -->
+<!-- login.jsp 로 이동 (첫 페이지라는 것을 표시하기 위해 start달고 감)-->
 
 <!--jquery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

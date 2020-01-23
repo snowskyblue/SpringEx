@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<h3>Transferable Object worker</h3>
+<hr/>
+
+<button onclick="initWorker()">Init Worker</button>
+<button onclick="startWorker()">Start Worker</button>
+<button onclick="stopWorker()">Stop Worker</button>
+
+<!-- console 창
+[Main] Init Web Worker
+main.js:34 [Main] Before Transfering:
+main.js:35 [Main] Length of Array Buffer 1: 1000
+main.js:36 [Main] Length of Array Buffer 2: 100000
+main.js:40 [Main] After Transfering:
+main.js:41 [Main] Length of Array Buffer 1: 0
+main.js:42 [Main] Length of Array Buffer 2: 0
+worker.js:6 [Worker] Worker Thread receives command:  start
+worker.js:9 [Worker] Length of Array Buffer 1: 1000
+worker.js:10 [Worker] Length of Array Buffer 2: 100000
+main.js:53 [Main] Worker terminated.
+ -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="../js/main.js"></script> <!-- main thread javascript를 외부에 둘 수도 있다 -->
+
+
+</body>
+</html>

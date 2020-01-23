@@ -95,7 +95,7 @@ public class HomeController {
 		
 		response.setContentType("application/json");
 		response.setCharacterEncoding("UTF-8");
-		response.getWriter().print(outData.toString()); //데이터를 전송할때는 return말고 print씀//tpString()생략가능
+		response.getWriter().print(outData.toString()); //데이터를 전송할때는 return말고 print씀//toString()생략가능
 		
 		/* 사진을 올리면 자동으로 html문서로 바꿔서 브라우져에 뿌려줌
 		 * <figure class="image ck-widget ck-widget_selected" contenteditable="false"><img src="http://localhost:8181/ck/editUpload/shap2.jpg"><figcaption class="ck-placeholder ck-editor__editable ck-editor__nested-editable ck-hidden" data-placeholder="Enter image caption" contenteditable="true"><br data-cke-filler="true"></figcaption></figure>

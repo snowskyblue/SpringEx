@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aop-reference-model>
-<aop-project name="1212transaction"/>
-<aop-project name="1224ckEditor"/>
-<aop-project name="1227fileConvert"/>
+<aop-project name="stay"/>
 </aop-reference-model>

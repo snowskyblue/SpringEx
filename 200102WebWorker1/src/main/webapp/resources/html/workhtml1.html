@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<h3>UI thread(main thread)</h3>
+<!-- output 부분만 계속 update 해주는 worker(javascript) : main thread와 상관 없이 -->
+<p>Count numbers: <output id="result"></output></p>
+<button onclick="startWorker()">Start Worker</button> 
+<button onclick="stopWorker()">Stop Worker</button>
+
+<p><strong>Note:</strong> Internet Explorer 9 and earlier versions do not support Web Workers.</p><br/>
+<a href="../html/workhtml2.html">workerhtml2로 이동</a>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+<script>
+$(document).ready(function(){ //jquery , 함수는 jquery밖에 정의 해야됨(아예 jquery 없애고 w정의도 밖으로 빼도 됨)
+	var w; 
+});
+
+function startWorker(){
+	if(typeof(Worker) != "undefined"){ //Worker 지원 여부
+		if(typeof(w) == "undefined") { //worker 객체가 없다면 만들어줌
+			w = new Worker("../js/worker.js"); //js파일로 worker용 객체를 만듬
+			//.. : resources로 올라갔다가 js폴더를 찾음
+			//localhost:8181/web1/resources/js/worker.js
+		}
+		w.onmessage = function(event){ //워커로부터 메시지를 받을경우 실행할 일 정의
+			document.getElementById("result").innerHTML = event.data;
+			//$("#result").text(event.data); //jquery
+		};
+	}
+	else {
+		document.getElementById("result").innerHTML = 
+			"Sorry, your browser does not support Web Workers...";
+	}
+}
+
+function stopWorker(){ //worker를 종료시키고 초기화 시킴
+	w.terminate(); //worker 종료
+	w = undefined;	//worker 초기화 (그래야 startWorker에서 새로 만들 수 있음)
+}
+</script>
+
+<script>
+
+</script>
+
+</body>
+</html>

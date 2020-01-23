@@ -29,7 +29,7 @@ public class CustomUserDetailsService implements UserDetailsService{
 		if(dto == null) {
 			throw  new UsernameNotFoundException("No user found with username");
 		}
-		String pw = dto.getPpw();
+		String pw = dto.getPpw();	//enc pw임 spring에서 입력된 raw비번을
 		Collection<SimpleGrantedAuthority> roles = new ArrayList<SimpleGrantedAuthority>();
 		roles.add(new SimpleGrantedAuthority("ROLE_USER"));
 		UserDetails user = new User(username, pw , roles);

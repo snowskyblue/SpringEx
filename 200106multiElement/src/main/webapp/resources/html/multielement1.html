@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+
+<div>
+	<span>0번째</span>
+	<p>first</p>
+	<h3>second</h3>
+</div>
+
+<ul>
+	<li>Coffee</li>
+	<li>Milk</li>
+	<li>Soda</li>
+</ul>
+
+<div>
+	<button>button1</button>
+</div>
+<div>
+	<p>
+		<button>button2</button>
+	</p>
+</div>
+<div>
+	<button>button3</button>
+</div>
+<div>
+	<button>button4</button>
+</div>
+
+<!--jquery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!--popper -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<!--javascript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<!-- class로 선택시는 배열형태로 엘리먼트들이 선택됨 -->
+<script>
+$(document).ready(function(){
+	//동일레벨에서 색인번호 찾을 시는 index()사용
+	console.log("색인번호 2번 : " + $("h3").index());
+	
+	$("li").click(function(){
+		alert($(this).index());
+	});
+	
+	//동일레벨이 아닐시 색인번호 찾는 법(동일레벨일 때도 됨 - 이거 쓰는게 나음)
+	$("button").click(function(){
+		var j = $("button").index(this);
+		//모든 button을 기준으로 하는 이벤트 엘리먼트 색인번호
+		alert(j);
+		var b = $("button");
+		b[j].innerHTML = "KOOK";
+		
+		/*자동클릭은 triger()
+		$("selector").trigger("click");
+		a만 조금 다름 : $("selector").get(0).trigger("click");
+		*/
+		
+		/*
+		var j = $(this).index(); (x) 자신을 체크하여 어떤 엘리먼트든 0 이 나옴
+		*/
+	});
+});
+
+</script>
+</body>
+</html>

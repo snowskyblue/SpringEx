@@ -62,10 +62,10 @@ public class TicketDao {
 				public PreparedStatement createPreparedStatement(Connection con)
 						throws SQLException {
 					////Card Table에는 제약 안줫고 ticket table에는 제약 있음
-					String query = "insert into card (consumerId, countnum) values (?, ?)";
+					String query = "insert into card (consumerId, countnum) values (PP_SEQ.nextval, ?)";
 					PreparedStatement pstmt = con.prepareStatement(query);
-					pstmt.setString(1, dto.getConsumerId());
-					pstmt.setString(2, dto.getAmount());
+					//pstmt.setString(1, dto.getConsumerId());
+					pstmt.setString(1, dto.getAmount());
 					
 					return pstmt;
 				}
@@ -78,10 +78,10 @@ public class TicketDao {
 					//Connection객체는 Spring에서 줌(JDBC Template 역할)
 					//Card Table에는 제약 안줫고 ticket table에는 제약 있음
 					//1장미만 5장초과로 구매할경우 오류 발생
-					String query = "insert into ticket (consumerId, countnum) values (?, ?)";
+					String query = "insert into ticket (consumerId, countnum) values (PP_SEQ.currval, ?)";
 					PreparedStatement pstmt = con.prepareStatement(query);
-					pstmt.setString(1, dto.getConsumerId());
-					pstmt.setString(2, dto.getAmount());
+					//pstmt.setString(1, dto.getConsumerId());
+					pstmt.setString(1, dto.getAmount());
 					
 					return pstmt;
 				}

@@ -45,6 +45,10 @@
 		<!-- transaction을 위해서는 dao에  transactionManager 변수 하나 더 만들어줘야 함-->
 	</beans:bean>
 	
+	<!-- password encoder 추가(비밀번호 암호화) 
+	시큐리티 관련 클래스가 아닌 일반 클래스에서 사용할 passwordEncoder를 등록(커맨드 클래스??)-->
+	<beans:bean name="passwordEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"  />
+	
 	<context:component-scan base-package="com.kim.security" />
 	
 	
