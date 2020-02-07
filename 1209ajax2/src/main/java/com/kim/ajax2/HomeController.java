@@ -47,7 +47,9 @@ public class HomeController {
 		//문장을 내보낼시는 PrintWriter를 이용
 		String result="login-failed"; //에러 //디비에서 찾아본후 처리해주는 곳
 		PrintWriter writer = null;
-		
+		String uid = request.getParameter("uid");
+		String upw = request.getParameter("upw");
+		System.out.println(uid + upw);
 		try {
 			writer = response.getWriter();
 		} catch (Exception e) {

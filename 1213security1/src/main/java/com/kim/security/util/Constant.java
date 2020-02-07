@@ -11,6 +11,7 @@ public class Constant {
 	public static JdbcTemplate template; 
 	public static PlatformTransactionManager transactionManager;
 	public static BDaoTemplate dao;
+	public static String user_id;
 	
 	public UserDto login(String bId) {		
 		String sql = "SELECT PID,PPW,PADDRESS,PHOBBY,PPROFILE FROM USERDB WHERE PID='"+bId+"'";	

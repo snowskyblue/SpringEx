@@ -8,6 +8,8 @@
            http://www.springframework.org/schema/security/spring-security.xsd">
     <!-- 이미지를 업로드 시키는 요청 경로(request Mapping)에 대해서는 시큐리티 적용지 않음 -->
     <http pattern="/upload" security="none"></http>
+    <http pattern="/ngajax1" security="none"></http>
+    <http pattern="/ngajax2" security="none"></http>
     <http auto-config="true" use-expressions = "true">
     	<headers> <!-- X-Frame-Options : deny 해결 (iframe 사용시 보안문제 복잡) -->
     		<frame-options disabled="true"></frame-options>

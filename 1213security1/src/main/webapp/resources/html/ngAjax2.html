@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html  lang="ko" ng-app="myApp">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body ng-controller="myAppCtrl">
+
+<h1>AngularJS Built-in Service $http<br/></h1>
+<hr/>
+<div>{{result}}</div>
+<div>
+	<span ng-bind-html="trustedHtml"></span>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script>
+var myApp = angular.module("myApp",[]);
+myApp.controller("myAppCtrl", function($scope,$http,$sce){
+	$scope.result = "";
+	
+	$http({
+		method: 'POST',
+		url: '../ngajax2',
+		params: {
+	        name: '이름',
+	        age: '35'	       
+	    },
+	    headers: {
+	        'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
+	    }
+	})
+	.then(function mySuccess(response) {
+		//$scope.result = response.data;
+		var myHtml = response.data;
+		$scope.trustedHtml = $sce.trustAsHtml(myHtml);
+	},function myError(response){
+		$scope.result = response.status;
+	});	
+});
+</script>
+</body>
+</html>

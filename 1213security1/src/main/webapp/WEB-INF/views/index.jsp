@@ -21,8 +21,12 @@
 </head>
 <body>
 
-<a href="login?log=start">로그인 페이지</a>
+<a href="login?log=start">로그인 페이지</a><br/>
 <!-- login.jsp 로 이동 (첫 페이지라는 것을 표시하기 위해 start달고 감)-->
+
+<a href="html/ngExam1.html">장바구니로 이동(Angular Page)</a><br/>
+<a href="html/ngAjax1.html">Angular Ajax(String)</a><br/>
+<a href="html/ngAjax2.html">Angular Ajax(html파일)</a>
 
 <!--jquery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

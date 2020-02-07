@@ -1,6 +1,7 @@
 package com.kim.security.controller;
 
 import java.io.PrintWriter;
+import java.security.Principal;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -9,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -16,6 +18,8 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.kim.security.command.BCommand;
 import com.kim.security.command.BJoinCommand;
+import com.kim.security.dto.Params;
+import com.kim.security.util.Constant;
 
 
 
@@ -79,7 +83,13 @@ public class BController {
 		
 		/*security*/
 		@RequestMapping("mainFrame")
-		public String mainFrame(HttpServletRequest request,HttpServletResponse response,Model model) {
+		public String mainFrame(Principal principal,Model model) {
+			/*HttpServletRequest request,HttpServletResponse response*/
+			Constant.user_id = principal.getName(); /*자바 파일안에서 사용 가능*/
+			System.out.println("로그인 성공 후 바로 아이디값을 저장 : " + Constant.user_id);
+			
+			/*jsp는 model객체를 사용해서 el로 뽑아쓰거나, sessionStorge에 넣어서 씀*/
+			model.addAttribute("user_id", Constant.user_id);
 			return "mainFrame";
 		}
 		
@@ -123,4 +133,51 @@ public class BController {
 			
 			//BController의 result는 join-success
 		}
+		
+		@RequestMapping("ngajax1") //ModelAttribute를 사용하여 파라메터를 params를 연계하는 dto 클래스 Params를 정의
+		public void ngajax1(@ModelAttribute Params params, HttpServletRequest request, HttpServletResponse response)
+			throws Exception {
+			//request.setCharacterEncoding("UTF-8");
+			//response.setContentType("text/plain; charset=UTF-8");
+			//response.setHeader("Cache-Control", "no-cache");
+			String result = "Hello, "+ params.getName()+"  " + params.getAge();
+			//html 페이지에서 response.data로 나오는 값
+			
+			System.out.println(result);			
+			//문자열 보낼시는 PrintWriter로 jsp 보낼시는 String으로
+			PrintWriter writer = null;
+			try {
+				writer = response.getWriter();
+				/*Returns a PrintWriter object that can send character text to the client.*/
+				System.out.println("response.getCharacterEncoding() : " + response.getCharacterEncoding());
+			}
+			catch(Exception e) {
+				e.printStackTrace();
+			}
+			writer.append(result);
+		}
+		
+		//반환은 String
+		@RequestMapping("ngajax2") //@ModelAttribute를 사용하여 파라메터 params를 연계하는 dto 클래스 Params를 정의
+		public String ngajax2(@ModelAttribute Params params,HttpServletResponse response,HttpServletRequest request) 
+				throws Exception {
+			//request.setCharacterEncoding("UTF-8");
+			//response.setContentType("text/plain; charset=UTF-8");
+			//response.setHeader("Cache-Control", "no-cache");
+			String result = "Hello, "+ params.getName()+"  " + params.getAge();
+			System.out.println(result);	
+			return "mainFrame";  //jsp파일 리턴(위에 mainFrame RequestMapping으로 가는거 아님)
+			//문자열 보낼시는 PrintWriter로 jsp보낼시는 String으로
+			/*
+			PrintWriter writer = null;
+			try {
+				writer = response.getWriter();
+			}
+			catch(Exception e) {
+				e.printStackTrace();
+			}
+			writer.append(result);
+			*/
+		}
+		
 }

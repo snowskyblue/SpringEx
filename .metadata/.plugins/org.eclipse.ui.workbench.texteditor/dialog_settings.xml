@@ -8,52 +8,52 @@
 		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="div1"/>
+		<item key="selection" value="radio"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
-		<item key="wholeword" value="false"/>
+		<item key="wholeword" value="true"/>
 		<item key="incremental" value="true"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
-			<item value="div1"/>
-			<item value="edio"/>
-			<item value=".on"/>
-			<item value="숙소와 주변"/>
-			<item value="info"/>
-			<item value="pink"/>
-			<item value="detailadd"/>
-			<item value="detail"/>
-			<item value=".row ."/>
-			<item value="col-sm-6"/>
-			<item value=".co"/>
-			<item value=".col-sm-"/>
-			<item value="detailaddress&quot;"/>
-			<item value="justify-content-between"/>
-			<item value="&quot;detailadd"/>
+			<item value="radio"/>
+			<item value="wifi"/>
+			<item value="elements"/>
+			<item value="d_val"/>
+			<item value="value"/>
+			<item value="checked"/>
+			<item value="modalPos"/>
+			<item value="emailBtn"/>
+			<item value="dto."/>
+			<item value="datepicker"/>
+			<item value="#acm_availdate"/>
+			<item value="acm_availdate"/>
+			<item value="date"/>
+			<item value="checkPwd"/>
+			<item value="checkPw"/>
 		</list>
 		<list key="replacehistory">
-			<item value="amenities"/>
-			<item value="acm_bedding"/>
+			<item value="acmTitle"/>
+			<item value="hostBoard_list"/>
+			<item value="hostBoard"/>
+			<item value="board_notice"/>
+			<item value="board"/>
+			<item value="dtos2"/>
+			<item value="dto2"/>
+			<item value="list"/>
+			<item value="tabMenu"/>
+			<item value="tab"/>
+			<item value="Tab"/>
 			<item value=""/>
-			<item value="park"/>
-			<item value="col-sm-3 form-check-inline"/>
-			<item value="extinguisher"/>
-			<item value="bbq"/>
-			<item value="breakfast"/>
-			<item value="infodesk"/>
-			<item value="heater"/>
-			<item value="garden"/>
-			<item value="balcony"/>
-			<item value="fan"/>
-			<item value="hair_dryer"/>
-			<item value="shower"/>
+			<item value="acmCtrl"/>
+			<item value="addAcm"/>
+			<item value="editorInit"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="870"/>
-		<item key="DIALOG_Y_ORIGIN" value="459"/>
-		<item key="DIALOG_WIDTH" value="362"/>
-		<item key="DIALOG_HEIGHT" value="441"/>
+		<item key="DIALOG_X_ORIGIN" value="486"/>
+		<item key="DIALOG_Y_ORIGIN" value="416"/>
+		<item key="DIALOG_WIDTH" value="361"/>
+		<item key="DIALOG_HEIGHT" value="529"/>
 		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|10.2|0|WINDOWS|1|-17|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
 	</section>
 	<section name="org.eclipse.jst.jsp.ui.internal.preferences.ui.JSPTemplatePreferencePage$JSPEditTemplateDialog_dialogBounds">
@@ -61,10 +61,17 @@
 		<item key="DIALOG_Y_ORIGIN" value="0"/>
 		<item key="DIALOG_WIDTH" value="1938"/>
 		<item key="DIALOG_HEIGHT" value="1048"/>
-		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
+		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|10.2|0|WINDOWS|1|-17|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
 	</section>
 	<section name="org.eclipse.ui.texteditor.GotoLineAction$GotoLineDialog_dialogBounds">
 		<item key="DIALOG_X_ORIGIN" value="652"/>
 		<item key="DIALOG_Y_ORIGIN" value="344"/>
+	</section>
+	<section name="org.eclipse.wst.html.ui.internal.preferences.ui.HTMLTemplatePreferencePage$HTMLEditTemplateDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="9"/>
+		<item key="DIALOG_Y_ORIGIN" value="9"/>
+		<item key="DIALOG_WIDTH" value="1920"/>
+		<item key="DIALOG_HEIGHT" value="1030"/>
+		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|10.2|0|WINDOWS|1|-17|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
 	</section>
 </section>

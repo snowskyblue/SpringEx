@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aop-reference-model>
 <aop-project name="stay"/>
+<aop-project name="1211jdbcTemplate"/>
+<aop-project name="1209ajaxEx1"/>
+<aop-project name="1209ajax2"/>
 </aop-reference-model>

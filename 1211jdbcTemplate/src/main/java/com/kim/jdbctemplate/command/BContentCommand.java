@@ -22,7 +22,6 @@ public class BContentCommand implements BCommand {
 		BDto dto = dao.contentView(bId);
 		
 		model.addAttribute("content_view", dto);
-		
 	}
 
 }

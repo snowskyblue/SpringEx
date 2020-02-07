@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html  lang="ko" ng-app="myApp">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body ng-controller="myAppCtrl">
+
+<!-- 장바구니를 localStorage가 아니라 서버에 저장하는 방법
+이 후에는 똑같이 해주고, return으로 success 다시 보내주기 -->
+<h1>AngularJS Built-in Service $http<br/></h1>
+<hr/>
+<!-- ng는 form을 안쓰고 변수를 써서 서버에 값을 보냄 -->
+<input type="text" ng-model="n" ng-change="changed()"><br/> <!-- ng-click="changed()" 버튼만들어서 제출 -->
+<div>{{result}}</div> <!-- 서버에서 돌아온 후 -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script>
+var myApp = angular.module("myApp",[]);
+myApp.controller("myAppCtrl", function($scope,$http){
+	$scope.n = "abcd";
+	$scope.result = "";
+	/*  https://localhost:8443/security/html/ngAjax1.html
+		https://localhost:8443/security/			*/
+	$http({
+		method: 'POST',
+		url: '../ngajax1',
+		params: {
+	        name: $scope.n,
+	        age: '35'
+	    },
+	    headers: {
+	        'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
+	    }
+	})
+	.then(function mySuccess(response) { /*서버(컨트롤러)에서 오는 응답*/
+		$scope.result = response.data;	/*서버(컨트롤러)에서  PrintWriter객체에 append 해준 문자열*/
+	},function myError(response){
+		$scope.result = response.status;	/*403 과 같은 숫자*/
+	});
+	
+	$scope.changed = function(){
+		$http({
+			method: 'POST',
+			url: '../ngajax1',
+			params: {
+		        name: $scope.n,
+		        age: '35'
+		    },
+		    headers: {
+		        'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
+		    }
+		})
+		.then(function mySuccess(response) {
+			$scope.result = response.data;
+		},function myError(response){
+			$scope.result = response.status;
+		});	
+	};
+	
+});
+/*
+myApp.directive('krInput', [ '$parse', function($parse) { 
+	return { priority : 2, restrict : 'A', compile : function(element) { 
+		element.on('compositionstart', function(e) { 
+			e.stopImmediatePropagation(); }); }, }; } ]);
+*/
+</script>
+</body>
+</html>

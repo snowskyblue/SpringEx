@@ -17,11 +17,19 @@
 <body>
 
 <h3>mainFrame입니다</h3>
+<p>controller으로부터 받은 model객체를 el로 씀 : ${ user_id }</p>
 
-<a href="logout_view">로그아웃</a>
-
+<a href="logout_view">로그아웃</a><br/>
+<a href="../join_view">회원가입페이지로 이동</a>
+<!--https://localhost:8443/security/
+	https://localhost:8443/security/html/ngAjax2.html
+	https://localhost:8443/security/join_view  -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script>
+var user_id = "${user_id}";
+sessionStorage.setItem("user_id", user_id);
+</script>
 </body>
 </html>
